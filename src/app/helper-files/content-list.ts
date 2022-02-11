@@ -15,9 +15,10 @@ export class ContentList {
     arrayLength(): number {
         return this._contentArray.length;
     }
+
     generateHtml(index: number): string {
         if (index >= this._contentArray.length) {
-            return `<div class="error">No Digimon found at index ${index}</div>`;
+            return `<div class="error">Nothing found at index ${index}</div>`;
         }
         return `<div class="title">${this._contentArray[index].title}</div>
         <div class="description">${this._contentArray[index].description}</div>
