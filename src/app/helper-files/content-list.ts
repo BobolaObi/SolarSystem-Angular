@@ -1,8 +1,8 @@
-// importing Content interfaceimport { Content } from "./content-interface";
 import { Content } from "./content-interface";
 
 export class ContentList {
     private _contentArray: Content[];
+
     constructor() {
         this._contentArray = [];
     }
@@ -16,6 +16,9 @@ export class ContentList {
         return this._contentArray.length;
     }
 
+//     //A function that takes an input of an index of the array and returns a reader-friendly html
+// output of a Content item's properties at that index (title, description, creator, imgURL
+//     and type). Note that the imgURL should be used to generate an image tag
     generateHtml(index: number): string {
         if (index >= this._contentArray.length) {
             return `<div class="error">Nothing found at index ${index}</div>`;

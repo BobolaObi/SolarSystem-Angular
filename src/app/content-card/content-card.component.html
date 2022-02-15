@@ -1,5 +1,12 @@
-<p>content-card works!</p>
-<div [innerHTML]="list.generateHtml(0)"></div>
-<div [innerHTML]="list.generateHtml(1)"></div>
-<div [innerHTML]="list.generateHtml(2)"></div>
-<div [innerHTML]="list.generateHtml(3)"></div>
+<img *ngIf="content?.imgURL" (click)="logId()" [src]="content?.imgURL">
+<h2>{{ content?.title}}</h2>
+<p class="description">{{ content?.description }}</p>
+<div class="meta-data">
+  <div class="author-info">
+    <span class="creator">{{ content?.creator }}</span>
+    <span *ngIf="content?.type" class="type">{{ content?.type }}</span>
+  </div>
+  <div *ngIf="content?.tags" class="tags">
+    <span class="tag" *ngFor="let tag of content?.tags">{{ tag }}</span>
+  </div>
+</div>
