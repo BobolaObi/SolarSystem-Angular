@@ -18,7 +18,7 @@ export class ContentList {
 
     generateHtml(index: number): string {
         if (index >= this._contentArray.length) {
-            return `<div class="error">Nothing found at index ${index}</div>`;
+            return `<div class="error">No Planets found at index ${index}</div>`;
         }
         return `<div class="title">${this._contentArray[index].title}</div>
         <div class="description">${this._contentArray[index].description}</div>

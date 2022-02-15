@@ -20,7 +20,7 @@ export class ContentCardComponent implements OnInit {
       title: 'Mercury',
       description: "Mercury has been known for a long time because it is visible to the naked eye. Galileo Galilei made the first telescopic observation of this small planet in the 17th century. It was named after the swift Roman god of commerce.",
       creator: 'flexible',
-      imgURL: 'https://upload.https://theplanets.org/123/2021/11/Mercury.png.org/wikipedia/en/5/5b/Agumonappearance.png',
+      imgURL: 'https://upload.wikimedia.org/wikipedia/commons/4/4a/Mercury_in_true_color.jpg',
       type: "Planet"
     };
     this.item2 = {
@@ -28,14 +28,14 @@ export class ContentCardComponent implements OnInit {
       title: 'Venus',
       description: "Venus is only the second-closest planet to the Sun but it is the hottest. It has a very thick atmosphere which traps the heat from the Sun, thus causing its temperature to rise. It got its name from the Roman goddess of love and beauty, whose Greek counterpart is Aphrodite.",
       creator: 'flexible',
-      imgURL: 'https://https://theplanets.org/123/2021/11/Venus.png.wikia.nocookie.net/digimon/images/d/d1/Gabumon_b.jpg'
+      imgURL: "https://scitechdaily.com/images/Magellan-Venus-Surface.jpg"
     };
     this.item3 = {
       id: 2,
       title: 'Mars',
       description: "Mars is often dubbed the “Red Planet” because of the iron on its surface. It is the fourth planet from the Sun, located around 228 million km (142 million mi) away. This is a dry desert world that is also very cold.",
       creator: 'flexible',
-      imgURL: 'https://upload.https://theplanets.org/123/2021/11/Mars.jpg.org/wikipedia/it/thumb/d/d5/Biyomon.png/390px-Biyomon.png',
+      imgURL: 'https://images.pexels.com/photos/87651/earth-blue-planet-globe-planet-87651.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
       type: 'Planet'
     };
     this.list = new ContentList();
