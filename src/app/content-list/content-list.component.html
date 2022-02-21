@@ -1,3 +1,20 @@
+<div>
+  <input #titleSearch>
+  <button (click)="checkForTitle(titleSearch.value)">Title Check</button>
+  <div>
+    <span class="success" *ngIf="searchTitle"> {{ titleSearch.value}} found!</span>
+    <span class="failure" *ngIf="searchTitle === false"> {{ titleSearch.value}} not found!</span>
+  </div>
+</div>
 
-<app-content-card *ngFor="let item of planets; first as isTheFirstElement"
-[planets]="item" [class.is-first]="isTheFirstElement"></app-content-card>
+<!--No types set-->
+<app-planets-card [class.found]="titleSearch.value === item.title" *ngFor="let item of (planets | typeFilter);
+ first as isTheFirstElement"  [content]="item"  [class.is-first]="isTheFirstElement" class="no-type"></app-planets-card>
+
+
+<app-planets-card [class.found]="titleSearch.value === item.title" *ngFor="let item of (planets | typeFilter: 'outer'); first as isTheFirstElement"
+                  [content]="item" [class.is-first]="isTheFirstElement" class="rookie"></app-planets-card>
+
+
+<app-planets-card [class.found]="titleSearch.value === item.title" *ngFor="let item of (planets | typeFilter: 'Inner'); first as isTheFirstElement"
+                  [content]="item" [class.is-first]="isTheFirstElement" [class]="item.type | lowercase"></app-planets-card>
