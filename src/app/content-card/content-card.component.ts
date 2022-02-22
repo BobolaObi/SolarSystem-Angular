@@ -11,7 +11,6 @@ export class ContentCardComponent implements OnInit {
 
   constructor() {
     //Theme Solar system / Planets
-
   }
 
   ngOnInit(): void {

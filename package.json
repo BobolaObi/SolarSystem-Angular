@@ -8,8 +8,8 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "generatecomponent": "ng generate component",
-    "generatepipe": "ng g generate pipe",
-    "generatedirective" : "ng g pipe"
+    "generatepipe": "ng generate pipe",
+    "generatedirective" : "ng generate directive"
 
   },
   "private": true,

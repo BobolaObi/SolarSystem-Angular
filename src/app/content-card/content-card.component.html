@@ -1,4 +1,4 @@
-<img *ngIf="planets?.imgURL" (click)="logId()" [src]="planets?.imgURL">
+
 <h2>{{ planets?.title}}</h2>
 <p class="description">{{ planets?.description }}</p>
 <div class="meta-data">
@@ -9,4 +9,6 @@
   <div *ngIf="planets?.tags" class="tags">
     <span class="tag" *ngFor="let tag of planets?.tags">{{ tag }}</span>
   </div>
+<!--Calling the click image function-->
+  <img *ngIf="planets?.imgURL" (click)="logId()" [src]="planets?.imgURL">
 </div>

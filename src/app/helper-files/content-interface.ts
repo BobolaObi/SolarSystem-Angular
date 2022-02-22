@@ -8,10 +8,10 @@
 // imgURL as an optional string
 // type as an optional string
 // tags as an optional array of strings
-//Export interface to the class 
+//Export interface to the class
 export interface Content {
     id: number;
-    title: string;
+    title?: string;
     description: string;
     creator: string;
     imgURL?: string;
