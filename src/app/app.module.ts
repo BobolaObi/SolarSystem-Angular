@@ -12,7 +12,6 @@ import { TypeFilterPipe } from './type-filter.pipe';
     AppComponent,
     ContentCardComponent,
     ContentListComponent,
-    TypeFilterPipe,
     TypeFilterPipe
   ],
   imports: [
