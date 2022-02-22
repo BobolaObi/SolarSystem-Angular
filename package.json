@@ -1,6 +1,6 @@
 {
   "name": "assignment1",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -9,7 +9,7 @@
     "test": "ng test",
     "generatecomponent": "ng generate component",
     "generatepipe": "ng g generate pipe",
-    "generatedirective" : "ng g pipe"
+    "generatedirective" : "ng generate directive"
 
   },
   "private": true,

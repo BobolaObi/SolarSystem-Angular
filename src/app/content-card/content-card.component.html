@@ -9,4 +9,8 @@
   <div *ngIf="planets?.tags" class="tags">
     <span class="tag" *ngFor="let tag of planets?.tags">{{ tag }}</span>
   </div>
+  <span *ngIf="planets?.imgURL" {{ planets.imgUrl == "https://scitechdaily.com/images/Magellan-Venus-Surface.jpg}}"
+  </span>
+
+
 </div>

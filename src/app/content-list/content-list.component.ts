@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Content} from "../helper-files/content-interface";
 
+// imgURL: "https://scitechdaily.com/images/Magellan-Venus-Surface.jpg", --Content for firs planet
 @Component({
   selector: 'app-content-list',
   templateUrl: "./content-list.component.html",
@@ -25,7 +26,7 @@ export class ContentListComponent implements OnInit {
         title: 'Venus',
         description: "Venus is only the second-closest planet to the Sun but it is the hottest. It has a very thick atmosphere which traps the heat from the Sun, thus causing its temperature to rise. It got its name from the Roman goddess of love and beauty, whose Greek counterpart is Aphrodite.",
         creator: 'flexible',
-        imgURL: "https://scitechdaily.com/images/Magellan-Venus-Surface.jpg",
+
         tags: ["venus", "second"]
       },
       {
@@ -105,5 +106,9 @@ export class ContentListComponent implements OnInit {
       this.searchTitle = false;
     }
 
+  }
+
+  setDefaultPic() {
+    planets.imgUrl  = "https://scitechdaily.com/images/Magellan-Venus-Surface.jpg";
   }
 }
