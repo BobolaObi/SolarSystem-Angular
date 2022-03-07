@@ -9,18 +9,15 @@
 </div>
 
 
+<app-content-card [class.found]="titleSearch.value === item.title" *ngFor="let item of (planets | typeFilter);
+ first as isTheFirstElement" [class.is-first]="isTheFirstElement" class="no-type"></app-content-card>
 
 
-
-<app-planets-card [class.found]="titleSearch.value === item.title" *ngFor="let item of (planets | typeFilter);
- first as isTheFirstElement" [class.is-first]="isTheFirstElement" class="no-type"></app-planets-card>
-
-
-<app-planets-card [class.found]="titleSearch.value === item.title" *ngFor="let item of (planets | typeFilter: 'outer'); first as isTheFirstElement"
-                  [class.is-first]="isTheFirstElement" class="rookie"></app-planets-card>
+<app-content-card [class.found]="titleSearch.value === item.title" *ngFor="let item of (planets | typeFilter: 'outer'); first as isTheFirstElement"
+                  [class.is-first]="isTheFirstElement" class="rookie"></app-content-card>
 
 
-<app-planets-card [class.found]="titleSearch.value === item.title" *ngFor="let item of (planets | typeFilter: 'Inner'); first as isTheFirstElement"
-                  [class.is-first]="isTheFirstElement" [class]="item.type | lowercase"></app-planets-card>
+<app-content-card [class.found]="titleSearch.value === item.title" *ngFor="let item of (planets | typeFilter: 'Inner'); first as isTheFirstElement"
+                  [class.is-first]="isTheFirstElement" [class]="item.type | lowercase"></app-content-card>
 
 

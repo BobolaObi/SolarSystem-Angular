@@ -108,7 +108,5 @@ export class ContentListComponent implements OnInit {
 
   }
 
-  setDefaultPic() {
-    planets.imgUrl  = "https://scitechdaily.com/images/Magellan-Venus-Surface.jpg";
-  }
+
 }
