@@ -8,7 +8,6 @@
 
 </div>
 
-
 <app-content-card [class.found]="titleSearch.value === item.title" *ngFor="let item of (planets | typeFilter);
  first as isTheFirstElement" [class.is-first]="isTheFirstElement" class="no-type"></app-content-card>
 
