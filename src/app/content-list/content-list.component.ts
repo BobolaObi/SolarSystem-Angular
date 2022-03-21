@@ -9,19 +9,19 @@ import {Content} from "../helper-files/content-interface";
 export class ContentListComponent implements OnInit {
   planets: Content[];
   searchTitle?: boolean;
-  // content: Content;
+  content: Content;
 
 
   constructor() {
-    // this.content = {
-    //   id: 0,
-    //   title: " ",
-    //   description: " ",
-    //   creator: " ",
-    //   imgURL: " ",
-    //   type: " ",
-    //   tags: [ ]
-    // }
+    this.content = {
+      id: 0,
+      title: " ",
+      description: " ",
+      creator: " ",
+      imgURL: " ",
+      type: " ",
+      tags: [ ]
+    }
     this.planets = [{
       id: 0,
       title: 'Mercury',
@@ -105,8 +105,16 @@ export class ContentListComponent implements OnInit {
 
   //The type we are searching for is a string
   checkForTitle(title: string): void {
-    this.searchTitle = this.planets.some(d => d.title === title);
-    this.searchTitle = !!this.planets.filter(d => d.title === title).length;
+    if (this.planets.some(d => d.title === title)) {
+      this.searchTitle = true;
+    } else {
+      this.searchTitle = false;
+    }
+    if (this.planets.filter(d => d.title === title).length) {
+      this.searchTitle = true;
+    } else {
+      this.searchTitle = false;
+    }
 
   }
 }
