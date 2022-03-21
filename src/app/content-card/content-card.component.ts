@@ -8,7 +8,7 @@ import { Content } from '../helper-files/content-interface';
 })
 export class ContentCardComponent implements OnInit {
   @Input() planets?: Content;
-
+  // @Input() content?: Content;
   constructor() {
     //Theme Solar system / Planets
 

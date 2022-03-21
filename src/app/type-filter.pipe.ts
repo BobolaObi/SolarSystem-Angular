@@ -10,7 +10,7 @@ export class TypeFilterPipe implements PipeTransform {
 
     return planets.filter(planet => {
       console.log("planet name: ", planet.title, " type is set to ", planet.type);
-      return type ? planet.type === type : (!planet.type || planet.type === '');
+      return type? planet.type === type : (!planet.type || planet.type === '');
     });
 
   }

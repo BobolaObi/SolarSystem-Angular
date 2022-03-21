@@ -1,6 +1,6 @@
-:host.is-first{
-  border: 2px solid #000;
-}
+//:host.is-first{
+//  border: 2px solid #000;
+//}
 
 :host{
   border: 1px solid #337d33;
@@ -41,4 +41,20 @@
     border-radius:8px;
     margin: 0 5px 0 0;
   }
+  &.rookie{
+    background-color: #0b5cf5;
+  }
+  &.champion{
+    background-color: #13dd9a;
+  }
+  &.no-type{
+    background-color: #910afc;
+  }
+  &.found{
+    border-color: #f41c5b;
+    border-width: 8px;
+  }
+
 }
+
+
