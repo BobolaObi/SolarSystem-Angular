@@ -35,7 +35,7 @@ export class ContentListComponent implements OnInit {
         title: 'Mars',
         description: "Mars is often dubbed the “Red Planet” because of the iron on its surface. It is the fourth planet from the Sun, located around 228 million km (142 million mi) away. This is a dry desert world that is also very cold.",
         creator: 'flexible',
-        imgURL: 'https://images.pexels.com/photos/87651/earth-blue-planet-globe-planet-87651.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
+        imgURL: 'https://upload.wikimedia.org/wikipedia/commons/0/02/OSIRIS_Mars_true_color.jpg',
         type: 'Inner',
         tags: ["Mars", "third"]
       }
@@ -55,8 +55,7 @@ export class ContentListComponent implements OnInit {
         title: 'Jupiter',
         description: "Jupiter has a long history of surprising scientists – all the way back to 1610 when Galileo Galilei found the first moons beyond Earth. That discovery changed the way we see the universe.",
         creator: 'flexible',
-        imgURL: 'https://images.pexels.com/photos/87651/earth-blue-planet-globe-planet-87651.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
-        type: 'outer',
+imgURL: "https://upload.wikimedia.org/wikipedia/commons/2/2b/Jupiter_and_its_shrunken_Great_Red_Spot.jpg",      type: 'outer',
         tags: ["Jupiter", "five"]
       }
       ,
