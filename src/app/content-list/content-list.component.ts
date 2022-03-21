@@ -108,5 +108,10 @@ imgURL: "https://upload.wikimedia.org/wikipedia/commons/2/2b/Jupiter_and_its_shr
 
   }
 
-
+  addContentToList(newContent: Content): void {
+    console.log("content that came from the child element: ", newContent);
+    this.planets.push(newContent);
+    this.planets = [...this.planets];
+    console.log("my list after cloning: ", this.planets);
+  }
 }

@@ -1,3 +1,4 @@
+<app-create-content (newContentEvent)="addContentToList($event)"></app-create-content>
 <div>
   <input #titleSearch>
   <button (click)="checkForTitle(titleSearch.value)">Title Check</button>
