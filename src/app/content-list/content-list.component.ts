@@ -10,8 +10,19 @@ import {Content} from "../helper-files/content-interface";
 export class ContentListComponent implements OnInit {
   planets: Content[];
   searchTitle?: boolean;
+  content: Content;
+
 
   constructor() {
+    this.content = {
+      id: 0,
+      title: " ",
+      description: " ",
+      creator: " ",
+      imgURL: " ",
+      type: " ",
+      tags: [ ]
+    }
     this.planets = [{
       id: 0,
       title: 'Mercury',
