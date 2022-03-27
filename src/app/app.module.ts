@@ -9,6 +9,7 @@ import { TypeFilterPipe } from './type-filter.pipe';
 import { HoverAffectDirective } from './hover-affect.directive';
 import { CreateContentComponent } from './create-content/create-content.component';
 import {FormsModule} from "@angular/forms";
+import { MessagesComponent } from './messages/messages.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import {FormsModule} from "@angular/forms";
     TypeFilterPipe,
     TypeFilterPipe,
     HoverAffectDirective,
-    CreateContentComponent
+    CreateContentComponent,
+    MessagesComponent
   ],
   imports: [
     BrowserModule,
