@@ -10,6 +10,7 @@ import { HoverAffectDirective } from './hover-affect.directive';
 import { CreateContentComponent } from './create-content/create-content.component';
 import {FormsModule} from "@angular/forms";
 import { MessagesComponent } from './messages/messages.component';
+import { ModifyContentComponentComponent } from './modify-content-component/modify-content-component.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { MessagesComponent } from './messages/messages.component';
     TypeFilterPipe,
     HoverAffectDirective,
     CreateContentComponent,
-    MessagesComponent
+    MessagesComponent,
+    ModifyContentComponentComponent
   ],
   imports: [
     BrowserModule,
