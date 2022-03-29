@@ -76,7 +76,7 @@ imgURL: "https://upload.wikimedia.org/wikipedia/commons/2/2b/Jupiter_and_its_shr
         creator: 'flexible',
         imgURL: 'https://solarsystem.nasa.gov/system/feature_items/images/88_carousel_uranus.jpg',
         type: 'Outer',
-        tags: ["Neptune", "first"]
+        // tags: ["Neptune", "first"]
       },
       {
         id: 7,
@@ -85,7 +85,7 @@ imgURL: "https://upload.wikimedia.org/wikipedia/commons/2/2b/Jupiter_and_its_shr
         creator: 'flexible',
         imgURL: 'https://solarsystem.nasa.gov/system/feature_items/images/82_carousel_neptune_1.jpg',
         type: 'Outer',
-        tags: ["Pluto", "seven"]
+        // tags: ["Pluto", "seven"]
       }];
 
   };
@@ -95,17 +95,20 @@ imgURL: "https://upload.wikimedia.org/wikipedia/commons/2/2b/Jupiter_and_its_shr
 
   //The type we are searching for is a string
   checkForTitle(title: string): void {
-    if (this.planets.some(d => d.title === title)) {
-      this.searchTitle = true;
-    } else {
-      this.searchTitle = false;
-    }
-    if (this.planets.filter(d => d.title === title).length) {
-      this.searchTitle = true;
-    } else {
-      this.searchTitle = false;
-    }
+    this.searchTitle = this.planets.some(d => d.title === title);
 
+    // if (this.planets.some(d => d.title === title)) {
+    //   this.searchTitle = true;
+    // }
+    // else {
+    //   this.searchTitle = false;
+    // }
+
+    // if (this.planets.filter(d => d.title === title).length) {
+    //   this.searchTitle = true;
+    // } else {
+    //   this.searchTitle = false;
+    // }
   }
 
   addContentToList(newContent: Content): void {

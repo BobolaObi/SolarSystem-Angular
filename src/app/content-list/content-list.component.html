@@ -1,21 +1,34 @@
 <app-create-content (newContentEvent)="addContentToList($event)"></app-create-content>
+
 <div>
   <input #titleSearch>
-  <button (click)="checkForTitle(titleSearch.value)">Title Check</button>
+  <button (click)="checkForTitle(titleSearch.value)">Tag Check</button>
   <div>
     <span class="success" *ngIf="searchTitle"> {{ titleSearch.value}} found!</span>
     <span class="failure" *ngIf="searchTitle === false"> {{ titleSearch.value}} not found!</span>
   </div>
+
+
 </div>
 
 <!--No types set-->
-<app-content-card appHoverAffect affect="border" [class.found]="titleSearch.value === item.title" *ngFor="let item of (planets | typeFilter);
- first as isTheFirstElement"   [planets]="item" [class.is-first]="isTheFirstElement" class="no-type"></app-content-card>
 
 
-<app-content-card appHoverAffect affect="border" [class.found]="titleSearch.value === item.title" *ngFor="let item of (planets | typeFilter: 'outer'); first as isTheFirstElement"
-                  [planets]="item" [class.is-first]="isTheFirstElement" class="rookie"></app-content-card>
+
+<app-content-card appHoverAffect affect="border"  [firstOrLast]="isTheFirstElement || isLast"
+                  [class.found]="titleSearch.value === item.title"
+                  *ngFor="let item of (planets | typeFilter); first as isTheFirstElement; last as isLast" [planets] = "item";
+                  [class.is-first]="isTheFirstElement" class="no-type"></app-content-card>
 
 
-<app-content-card appHoverAffect affect="border" [class.found]="titleSearch.value === item.title" *ngFor="let item of (planets | typeFilter: 'Inner'); first as isTheFirstElement"
+<app-content-card appHoverAffect affect="border"   [firstOrLast]="isTheFirstElement || isLast"
+
+                  [class.found]="titleSearch.value === item.title"
+                  *ngFor="let item of (planets | typeFilter: 2);
+                   first as isTheFirstElement; last as isLast" [planets] = "item"
+                  [class.is-first]="isTheFirstElement" class="rookie"></app-content-card>
+
+
+<app-content-card appHoverAffect affect="border" [class.found]="titleSearch.value === item.title" *ngFor="let item of (planets | typeFilter: 3);
+        first as isTheFirstElement; last as isLast" [planets] = "item";
                   [planets]="item" [class.is-first]="isTheFirstElement" [class]="item.type | lowercase"></app-content-card>
