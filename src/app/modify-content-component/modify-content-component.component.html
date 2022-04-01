@@ -1,16 +1,20 @@
+
 <div>
-  Name: <input #name>
+  <label>Title: <input [(ngModel)]="newContent.title"></label>
 </div>
 <div>
-  Img url: <input #imageUrl>
+  <label>Description: <input [(ngModel)]="newContent.description"></label>
 </div>
 <div>
-  Description: <input #description>
+  <label>Creator: <input [(ngModel)]="newContent.creator"></label>
 </div>
 <div>
-  Tags: <input #tags>
+  <label>Image URL: <input [(ngModel)]="newContent.imgURL"></label>
 </div>
 <div>
-  <button (click)="addPlanet( name.value, imageUrl.value, description.value, tags.value)">Add
-    New Planet</button>
+  <label>Type: <input [(ngModel)]="newContent.type"></label>
+</div>
+
+<div>
+  <button (click)="addItem()">{{(tempid !== "") ? "Update Content": "Add Content"}}</button>
 </div>
