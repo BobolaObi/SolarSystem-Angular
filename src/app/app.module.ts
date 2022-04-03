@@ -11,6 +11,7 @@ import { CreateContentComponent } from './create-content/create-content.componen
 import {FormsModule} from "@angular/forms";
 import { MessagesComponent } from './messages/messages.component';
 import { ModifyContentComponentComponent } from './modify-content-component/modify-content-component.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { ModifyContentComponentComponent } from './modify-content-component/modi
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
