@@ -10,6 +10,9 @@ import { HoverAffectDirective } from './hover-affect.directive';
 import { CreateContentComponent } from './create-content/create-content.component';
 import {FormsModule} from "@angular/forms";
 import { MessagesComponent } from './messages/messages.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import  {MatButtonModule} from "@angular/material/button";
+import {MatInputModule} from '@angular/material/input';
 
 
 @NgModule({
@@ -21,13 +24,18 @@ import { MessagesComponent } from './messages/messages.component';
     TypeFilterPipe,
     HoverAffectDirective,
     CreateContentComponent,
-    MessagesComponent
+    MessagesComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatInputModule
   ],
+
   providers: [],
   bootstrap: [AppComponent]
 })

@@ -9,7 +9,7 @@
 <div class="meta-data">
   <div class="author-info">
     <span class="creator">{{ planets?.creator }}</span>
-    <span  appHoverAffect affect="textDecoration"   *ngIf="planets?.type" class="type">{{ planets?.type }}</span>
+    <span appHoverAffect affect="textDecoration"   *ngIf="planets?.type" class="type">{{ planets?.type }}</span>
   </div>
   <div *ngIf="planets?.tags" class="tags">
     <span appHoverAffect affect="fontWeight" class="tag" *ngFor="let tag of planets?.tags">{{ tag }}</span>

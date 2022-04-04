@@ -22,6 +22,7 @@ export class AppComponent {
   }
   displayItem(id: string): void{
     if (!parseInt(id)) {
+      //
       this.messageService.add("Please enter a number value");
       return;
     }

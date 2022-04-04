@@ -1,6 +1,6 @@
 {
   "name": "assignment1",
-  "version": "0.0.6",
+  "version": "0.0.8",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -9,16 +9,17 @@
     "test": "ng test",
     "generatecomponent": "ng generate component",
     "generatepipe": "ng g generate pipe",
-    "generatedirective" : "ng generate directive"
-
+    "generatedirective": "ng generate directive"
   },
   "private": true,
   "dependencies": {
     "@angular/animations": "~13.2.0",
+    "@angular/cdk": "~13.3.2",
     "@angular/common": "~13.2.0",
     "@angular/compiler": "~13.2.0",
     "@angular/core": "~13.2.0",
     "@angular/forms": "~13.2.0",
+    "@angular/material": "~13.3.2",
     "@angular/platform-browser": "~13.2.0",
     "@angular/platform-browser-dynamic": "~13.2.0",
     "@angular/router": "~13.2.0",
