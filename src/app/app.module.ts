@@ -12,6 +12,7 @@ import {FormsModule} from "@angular/forms";
 import { MessagesComponent } from './messages/messages.component';
 import { ModifyContentComponentComponent } from './modify-content-component/modify-content-component.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {HttpClientModule} from "@angular/common/http";
 
 
 @NgModule({
@@ -24,13 +25,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HoverAffectDirective,
     CreateContentComponent,
     MessagesComponent,
-    ModifyContentComponentComponent
+    ModifyContentComponentComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
