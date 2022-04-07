@@ -1,5 +1,6 @@
-<app-modify-content-component></app-modify-content-component>
+<app-modify-content-component>
 
+</app-modify-content-component>
 <app-create-content (newContentEvent)="addContentToList($event)"></app-create-content>
 <div>
   <input #titleSearch>
@@ -9,6 +10,7 @@
     <span class="failure" *ngIf="searchTitle === false"> {{ titleSearch.value}} not found!</span>
   </div>
 </div>
+
 
 <!--No types set-->
 <app-content-card appHoverAffect affect="border" [class.found]="titleSearch.value === item.title" *ngFor="let item of (planets | typeFilter);

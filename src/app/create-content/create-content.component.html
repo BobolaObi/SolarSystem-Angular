@@ -4,27 +4,35 @@
   <label>ID:  ID: <input #id type="number"></label>
 
 </div>
+
 <div>
   <label>Title: <input [(ngModel)]="newContent.title"></label>
 </div>
+
 <div>
   <label>Description: <input [(ngModel)]="newContent.description"></label>
 </div>
+
 <div>
   <label>Creator: <input [(ngModel)]="newContent.creator"></label>
 </div>
+
 <div>
   <label>Image URL: <input [(ngModel)]="newContent.imgURL"></label>
 </div>
+
 <div>
   <label>Type: <input [(ngModel)]="newContent.type"></label>
 </div>
+
 <div>
   <label>Tags: <input [(ngModel)]="temptags"></label>
 </div>
+
 <div>
   <button (click)="addItemToParent()">Add Content</button>
 </div>
+
 <div>
   <span class="error-message"> {{ errorMessage }}</span>
 </div>

@@ -33,7 +33,7 @@ export class PlanetServiceService {
 
   updateContent(contentItem: Content): Observable<any>{
     this.messageService.add("Updating content on the server, id: " + contentItem.id);
-    return this.http.put("api/digimon", contentItem, this.httpOptions);
+    return this.http.put("api/planets", contentItem, this.httpOptions);
   }
 }
 

@@ -1,5 +1,7 @@
-import { Pipe, PipeTransform } from '@angular/core';
+import {Pipe, PipeTransform} from "@angular/core";
 import {Content} from "../helper-files/content-interface";
+
+
 
 @Pipe({
   name: 'typeFilter'

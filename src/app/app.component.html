@@ -3,8 +3,11 @@
   <label>Display single item at id: <input #id></label>
   <button (click)="displayItem(id.value)">Display item!</button>
 </p>
-<app-content-card [planets]="chosenPlanet" class="chosenPlanet"></app-content-card>
-<br><hr>
+<app-content-card [planets]="chosenPlanet" class="chosenPlanet">
+
+</app-content-card>
+<br><br>
+
 <h1>Planets</h1>
 <app-content-list></app-content-list>
 
