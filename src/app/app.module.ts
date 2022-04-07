@@ -13,6 +13,9 @@ import { MessagesComponent } from './messages/messages.component';
 import { ModifyContentComponentComponent } from './modify-content-component/modify-content-component.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {HttpClientModule} from "@angular/common/http";
+import {MatButtonModule} from "@angular/material/button";
+import {MatInputModule} from '@angular/material/input';
+
 
 
 @NgModule({
@@ -33,7 +36,9 @@ import {HttpClientModule} from "@angular/common/http";
     AppRoutingModule,
     FormsModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatButtonModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

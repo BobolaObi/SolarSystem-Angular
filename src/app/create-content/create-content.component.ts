@@ -6,7 +6,9 @@ import { Content } from '../helper-files/content-interface';
   templateUrl: './create-content.component.html',
   styleUrls: ['./create-content.component.scss']
 })
+
 export class CreateContentComponent implements OnInit {
+  value = 'Enter';
   newContent: Content;
   temptags: string = "";
   tempid: string = "";

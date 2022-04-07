@@ -1,30 +1,51 @@
-<!--In this new component, add an input field for all the necessary fields to make a piece of content, including the ID, followed by a button. When the button is clicked, send the new content item up from the CreateContent component to the ContentList using the promise pattern. When the new piece of content is successfully sent from the CreateContent component using that pattern, the resolved promise should invoke a success function that will add a message to the console saying the addition is successful, along with the title of the content, and the input fields in the CreateContent's html file should be cleared of their current values. When the ContentList receives the new content item, display the new item on the ContentList using your preexisting *ngFor's that still have the pipes operating on them (hint: The easiest way to test this will be to add content with a type that is already being filtered for by a pipe. And don't forget to clone!)-->
+<form class="example-form">
 
-<div>
-  <label>ID:  ID: <input #id type="number"></label>
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>ID</mat-label>
+    <input matInput  [(ngModel)]="tempid" >
+  </mat-form-field>
+  <br>
+  <mat-form-field appearance="fill">
+    <mat-label>Title</mat-label>
+    <input matInput [(ngModel)]="newContent.title">
+  </mat-form-field>
+  <br>
+  <mat-form-field appearance="fill">
+    <mat-label>Description</mat-label>
+    <input matInput [(ngModel)]="newContent.description">
+  </mat-form-field>
+  <br>
 
-</div>
-<div>
-  <label>Title: <input [(ngModel)]="newContent.title"></label>
-</div>
-<div>
-  <label>Description: <input [(ngModel)]="newContent.description"></label>
-</div>
-<div>
-  <label>Creator: <input [(ngModel)]="newContent.creator"></label>
-</div>
-<div>
-  <label>Image URL: <input [(ngModel)]="newContent.imgURL"></label>
-</div>
-<div>
-  <label>Type: <input [(ngModel)]="newContent.type"></label>
-</div>
-<div>
-  <label>Tags: <input [(ngModel)]="temptags"></label>
-</div>
+  <mat-form-field appearance="fill">
+    <mat-label>Creator</mat-label>
+    <input matInput [(ngModel)]="newContent.creator">
+  </mat-form-field>
+  <br>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Image URL</mat-label>
+    <input matInput [(ngModel)]="newContent.imgURL">
+  </mat-form-field>
+  <br>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Type</mat-label>
+    <input matInput [(ngModel)]="newContent.type">
+  </mat-form-field>
+  <br>
+  <mat-form-field appearance="fill">
+    <mat-label> Tags</mat-label>
+    <input matInput [(ngModel)]="newContent.tags">
+  </mat-form-field>
+
+</form>
+
 <div>
   <button (click)="addItemToParent()">Add Content</button>
+<button mat-raised-button color="primary" (click)="addItemToParent()">Add Content</button>
 </div>
+
 <div>
   <span class="error-message"> {{ errorMessage }}</span>
 </div>
+
