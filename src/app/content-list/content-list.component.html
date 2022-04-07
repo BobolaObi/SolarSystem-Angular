@@ -21,3 +21,21 @@
 
 <app-content-card appHoverAffect affect="border" [class.found]="titleSearch.value === item.title" *ngFor="let item of (planets | typeFilter: 'Inner'); first as isTheFirstElement"
                   [planets]="item" [class.is-first]="isTheFirstElement" [class]="item.type | lowercase"></app-content-card>
+
+<!--<app-content-card appHoverAffect affect="border"  [firstOrLast]="isTheFirstElement || isLast"-->
+<!--                  [class.found]="titleSearch.value === item.title"-->
+<!--                  *ngFor="let item of (planets | typeFilter); first as isTheFirstElement; last as isLast" [planets] = "item";-->
+<!--                  [class.is-first]="isTheFirstElement" class="no-type"></app-content-card>-->
+
+
+<!--<app-content-card appHoverAffect affect="border"   [firstOrLast]="isTheFirstElement || isLast"-->
+
+<!--                  [class.found]="titleSearch.value === item.title"-->
+<!--                  *ngFor="let item of (planets | typeFilter: 2);-->
+<!--                   first as isTheFirstElement; last as isLast" [planets] = "item"-->
+<!--                  [class.is-first]="isTheFirstElement" class="rookie"></app-content-card>-->
+
+
+<!--<app-content-card appHoverAffect affect="border" [class.found]="titleSearch.value === item.title" *ngFor="let item of (planets | typeFilter: 3);-->
+<!--        first as isTheFirstElement; last as isLast" [planets] = "item";-->
+<!--                  [planets]="item" [class.is-first]="isTheFirstElement" [class]="item.type | lowercase"></app-content-card>-->
