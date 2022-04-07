@@ -3,11 +3,13 @@
 //}
 
 :host{
-  border: 1px solid #337d33;
+  border: 5px solid grey;
+  rotation: 55deg;
   display: block;
   width: 400px;
   margin: 10px auto;
   text-align: center;
+  background-color: #bfe6bf;
 
   &.is-first{
     border: 2px solid #000;
@@ -42,13 +44,13 @@
     margin: 0 5px 0 0;
   }
   &.rookie{
-    background-color: #0b5cf5;
+    background-color: #e0ce77;
   }
-  &.champion{
-    background-color: #13dd9a;
-  }
+  //&.champion{
+  //  background-color: #13dd9a;
+  //}
   &.no-type{
-    background-color: #910afc;
+    background-color: #890b26;
   }
   &.found{
     border-color: #f41c5b;
