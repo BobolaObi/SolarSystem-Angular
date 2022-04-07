@@ -15,6 +15,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {HttpClientModule} from "@angular/common/http";
 import {MatButtonModule} from "@angular/material/button";
 import {MatInputModule} from '@angular/material/input';
+import {MatChipsModule} from "@angular/material/chips";
 
 
 
@@ -38,7 +39,8 @@ import {MatInputModule} from '@angular/material/input';
     BrowserAnimationsModule,
     HttpClientModule,
     MatButtonModule,
-    MatInputModule
+    MatInputModule,
+    MatChipsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

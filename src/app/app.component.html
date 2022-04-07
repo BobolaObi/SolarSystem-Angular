@@ -1,7 +1,12 @@
 <h1>Highlight Planet</h1>
 <p>
-  <label>Display single item at id: <input #id></label>
-  <button mat-raised-button color="primary"  (click)="displayItem(id.value)">Display item!</button>
+  <mat-form-field appearance="outline">
+    <mat-label> Enter item id:</mat-label>
+    <input matInput #id>
+  </mat-form-field>
+  <button mat-raised-button color="accent"  (click)="displayItem(id.value)">Display item!</button>
+
+  <br>
 </p>
 <app-content-card [planets]="chosenPlanet" class="chosenPlanet"></app-content-card>
 <br><hr>

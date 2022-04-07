@@ -1,20 +1,5 @@
+<app-create-content></app-create-content>
 
 <div>
-  <label>Title: <input [(ngModel)]="newContent.title"></label>
-</div>
-<div>
-  <label>Description: <input [(ngModel)]="newContent.description"></label>
-</div>
-<div>
-  <label>Creator: <input [(ngModel)]="newContent.creator"></label>
-</div>
-<div>
-  <label>Image URL: <input [(ngModel)]="newContent.imgURL"></label>
-</div>
-<div>
-  <label>Type: <input [(ngModel)]="newContent.type"></label>
-</div>
-
-<div>
-  <button (click)="addItem()">{{(tempid !== "") ? "Update Content": "Add Content"}}</button>
+  <button mat-raised-button color="primary" (click)="addItem()">{{(tempid !== "") ? "Update Content": "Add Content"}}</button>
 </div>
