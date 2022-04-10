@@ -1,3 +1,7 @@
+<nav>
+  <a routerLink="/list"  routerLinkActive="active">List</a>
+</nav>
+<router-outlet> </router-outlet>
 <h1>Highlight Planet</h1>
 <p>
   <mat-form-field appearance="outline">
@@ -8,8 +12,10 @@
 
   <br>
 </p>
-<app-content-card [planets]="chosenPlanet" class="chosenPlanet"></app-content-card>
-<br><hr>
+
+<!--Removing single app content card according to instruction:
+Remove the single content card from the AppComponent that you added in a previous assignment. The AppMessage component should stil be displayed on the AppComponent-->
+<app-content-card [planets]="chosenPlanet" class="chosenPlanet"></app-content-card><br><hr>
 <h1>Planets</h1>
 <app-content-list></app-content-list>
 

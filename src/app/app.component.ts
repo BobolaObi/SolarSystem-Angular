@@ -3,7 +3,8 @@ import {Content} from "./helper-files/content-interface";
 import {PlanetServiceService} from "./Services/planet-service.service";
 import {MessageServiceService} from "./Services/message-service.service";
 @Component({
-  selector: 'app-root',
+
+  selector:  'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })

@@ -17,6 +17,9 @@ import {MatButtonModule} from "@angular/material/button";
 import {MatInputModule} from '@angular/material/input';
 import {MatChipsModule} from "@angular/material/chips";
 import { DetailedViewComponent } from './detailed-view/detailed-view.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import {HttpClientInMemoryWebApiModule} from "angular-in-memory-web-api";
+import {InMemoryDataService} from "./Services/in-memory-data-service";
 
 
 
@@ -32,6 +35,7 @@ import { DetailedViewComponent } from './detailed-view/detailed-view.component';
     MessagesComponent,
     ModifyContentComponentComponent,
     DetailedViewComponent,
+    PageNotFoundComponent,
 
   ],
   imports: [
@@ -42,7 +46,11 @@ import { DetailedViewComponent } from './detailed-view/detailed-view.component';
     HttpClientModule,
     MatButtonModule,
     MatInputModule,
-    MatChipsModule
+    MatChipsModule,
+    HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {
+      dataEncapsulation: false,
+      delay: 500
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]
