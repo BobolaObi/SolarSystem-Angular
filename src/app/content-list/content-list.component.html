@@ -1,5 +1,26 @@
-<app-modify-content-component></app-modify-content-component>
+<h1>Add New planet</h1>
+<p>Sometimes inputs fields dont render properly until you click the buttons assigned to them</p>
+<p><app-modify-content-component></app-modify-content-component>
+<div style="background-color: rgba(116,123,219,0.38)">
+<h1>Highlight Planet</h1>
+  <p>Sometimes inputs fields dont render properly until you click the buttons assigned to them</p>
+<p>
+  <mat-form-field appearance="outline">
+    <mat-label> Enter item id:</mat-label>
+    <input matInput #id>
+  </mat-form-field>
+  <button mat-raised-button color="accent"  (click)="displayItem(id.value)">Display item!</button>
 
+  <br>
+</p>
+
+<!--Removing single app content card according to instruction:
+Remove the single content card from the AppComponent that you added in a previous assignment. The AppMessage component should stil be displayed on the AppComponent-->
+<!--<app-content-card [planets]="chosenPlanet" class="chosenPlanet"></app-content-card><br><hr>-->
+<h1>Find Planets</h1>
+<!--<app-content-list></app-content-list>-->
+
+</div>
 <!--<app-create-content (newContentEvent)="addContentToList($event)"></app-create-content>-->
 <div>
 <br>
