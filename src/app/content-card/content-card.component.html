@@ -14,4 +14,7 @@
   <div *ngIf="planets?.tags" class="tags">
     <span appHoverAffect affect="fontWeight" class="tag" *ngFor="let tag of planets?.tags">{{ tag }}</span>
   </div>
+  <a [routerLink]="['/list', planets?.id]" routerLinkActive="active">
+    Content Details
+  </a>
 </div>

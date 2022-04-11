@@ -1,57 +1,57 @@
 <h1>Add New planet</h1>
 <p>Sometimes inputs fields dont render properly until you click the buttons assigned to them</p>
-<p><app-modify-content-component></app-modify-content-component>
-<div style="background-color: rgba(116,123,219,0.38)">
-<h1>Highlight Planet</h1>
-  <p>Sometimes inputs fields dont render properly until you click the buttons assigned to them</p>
-<p>
-  <mat-form-field appearance="outline">
-    <mat-label> Enter item id:</mat-label>
-    <input matInput #id>
-  </mat-form-field>
-  <button mat-raised-button color="accent"  (click)="displayItem(id.value)">Display item!</button>
+<app-modify-content-component></app-modify-content-component>
+<!--<div style="background-color: rgba(116,123,219,0.38)">-->
 
-  <br>
-</p>
+<!--<app-content-card></app-content-card>-->
+<!--<h1>Highlight Planet</h1>-->
+<!--<p>-->
+<!--  <mat-form-field appearance="outline">-->
+<!--    <mat-label> Enter item id:</mat-label>-->
+<!--    <input matInput #id>-->
+<!--  </mat-form-field>-->
+<!--  <button mat-raised-button color="accent"  (click)="displayItem(id.value)">Display item!</button>-->
 
-<!--Removing single app content card according to instruction:
-Remove the single content card from the AppComponent that you added in a previous assignment. The AppMessage component should stil be displayed on the AppComponent-->
+<!--  <br>-->
+<!--</p>-->
+
+
 <!--<app-content-card [planets]="chosenPlanet" class="chosenPlanet"></app-content-card><br><hr>-->
-<h1>Find Planets</h1>
-<!--<app-content-list></app-content-list>-->
+<!--<h1>Find Planets</h1>-->
 
-</div>
+
+<!--</div>-->
 <!--<app-create-content (newContentEvent)="addContentToList($event)"></app-create-content>-->
-<div>
-<br>
-  <mat-form-field appearance="fill">
-    <input matInput  value="planet name" #titleSearch>
-  </mat-form-field>
+<!--<div>-->
+<!--<br>-->
+<!--  <mat-form-field appearance="fill">-->
+<!--    <input matInput  value="planet name" #titleSearch>-->
+<!--  </mat-form-field>-->
 
-<br>
-  <button mat-raised-button color="primary"  (click)="checkForTitle(titleSearch.value)">Planet Name Search</button>
-  <div>
-    <span class="success" *ngIf="searchTitle"> {{ titleSearch.value}} found!</span>
-    <span class="failure" *ngIf="searchTitle === false"> {{ titleSearch.value}} not found!</span>
-  </div>
-</div>
+<!--<br>-->
+<!--  <button mat-raised-button color="primary"  (click)="checkForTitle(titleSearch.value)">Planet Name Search</button>-->
+<!--  <div>-->
+<!--    <span class="success" *ngIf="searchTitle"> {{ titleSearch.value}} found!</span>-->
+<!--    <span class="failure" *ngIf="searchTitle === false"> {{ titleSearch.value}} not found!</span>-->
+<!--  </div>-->
+<!--</div>-->
 
 <!--No types set-->
 
-<app-content-card appHoverAffect affect="border"  [firstOrLast]="isTheFirstElement || isLast"
-                  [class.found]="titleSearch.value === item.title"
-                  *ngFor="let item of (planets | typeFilter); first as isTheFirstElement; last as isLast" [planets] = "item";
-                  [class.is-first]="isTheFirstElement" class="no-type"></app-content-card>
+<!--<app-content-card appHoverAffect affect="border"  [firstOrLast]="isTheFirstElement || isLast"-->
+<!--                  [class.found]="titleSearch.value === item.title"-->
+<!--                  *ngFor="let item of (planets | typeFilter); first as isTheFirstElement; last as isLast" [planets] = "item";-->
+<!--                  [class.is-first]="isTheFirstElement" class="no-type"></app-content-card>-->
 
 
-<app-content-card appHoverAffect affect="border"   [firstOrLast]="isTheFirstElement || isLast"
+<!--<app-content-card appHoverAffect affect="border"   [firstOrLast]="isTheFirstElement || isLast"-->
 
-                  [class.found]="titleSearch.value === item.title"
-                  *ngFor="let item of (planets | typeFilter: 2);
-                   first as isTheFirstElement; last as isLast" [planets] = "item"
-                  [class.is-first]="isTheFirstElement" class="rookie"></app-content-card>
+<!--                  [class.found]="titleSearch.value === item.title"-->
+<!--                  *ngFor="let item of (planets | typeFilter: 2);-->
+<!--                   first as isTheFirstElement; last as isLast" [planets] = "item"-->
+<!--                  [class.is-first]="isTheFirstElement" class="rookie"></app-content-card>-->
 
 
-<app-content-card appHoverAffect affect="border" [class.found]="titleSearch.value === item.title" *ngFor="let item of (planets | typeFilter: 3);
-        first as isTheFirstElement; last as isLast" [planets] = "item";
-                  [planets]="item" [class.is-first]="isTheFirstElement" [class]="item.type | lowercase"></app-content-card>
+<!--<app-content-card appHoverAffect affect="border" [class.found]="titleSearch.value === item.title" *ngFor="let item of (planets | typeFilter: 3);-->
+<!--        first as isTheFirstElement; last as isLast" [planets] = "item";-->
+<!--                  [planets]="item" [class.is-first]="isTheFirstElement" [class]="item.type | lowercase"></app-content-card>-->

@@ -1,8 +1,4 @@
-
-
 export const PLANETS = [{
-
-
     id: 0,
     title: 'Mercury',
     description: "Mercury has been known for a long time because it is visible to the naked eye. Galileo Galilei made the first telescopic observation of this small planet in the 17th century. It was named after the swift Roman god of commerce.",
@@ -16,7 +12,7 @@ export const PLANETS = [{
       title: 'Venus',
       description: "Venus is only the second-closest planet to the Sun but it is the hottest. It has a very thick atmosphere which traps the heat from the Sun, thus causing its temperature to rise. It got its name from the Roman goddess of love and beauty, whose Greek counterpart is Aphrodite.",
       creator: 'flexible',
-
+      imgURL: "http://www.nasa.gov/sites/default/files/thumbnails/image/imagesvenus20191211venus20191211-16.jpeg",
       tags: ["venus", "second"]
     },
     {

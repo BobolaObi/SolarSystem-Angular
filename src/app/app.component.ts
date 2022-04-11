@@ -13,28 +13,28 @@ export class AppComponent {
 
   chosenPlanet?: Content;
 
-  constructor(private planetServiceService: PlanetServiceService, private messageService: MessageServiceService) {
-  }
-
-  ngOnInit(): void{
-    this.planetServiceService.getContentItem(5).subscribe(
-      planetAtIndex => this.chosenPlanet = planetAtIndex
-    );
-  }
-  displayItem(id: string): void{
-    if (!parseInt(id)) {
-      this.messageService.add("Please enter a number value");
-      return;
-    }
-    let idNumber = parseInt(id);
-    this.planetServiceService.getContent().subscribe(arrayOfPlanets => {
-      let planetInArray = arrayOfPlanets.find(chosenPlanet => chosenPlanet.id === idNumber);
-      if (!planetInArray) {
-        this.messageService.add("Please enter a number value for a valid id");
-      }
-      else {
-        this.chosenPlanet = planetInArray;
-      }
-    });
-  }
+  // constructor(private planetServiceService: PlanetServiceService, private messageService: MessageServiceService) {
+  // }
+  //
+  // ngOnInit(): void{
+  //   this.planetServiceService.getContentItem(5).subscribe(
+  //     planetAtIndex => this.chosenPlanet = planetAtIndex
+  //   );
+  // }
+  // displayItem(id: string): void{
+  //   if (!parseInt(id)) {
+  //     this.messageService.add("Please enter a number value");
+  //     return;
+  //   }
+  //   let idNumber = parseInt(id);
+  //   this.planetServiceService.getContent().subscribe(arrayOfPlanets => {
+  //     let planetInArray = arrayOfPlanets.find(chosenPlanet => chosenPlanet.id === idNumber);
+  //     if (!planetInArray) {
+  //       this.messageService.add("Please enter a number value for a valid id");
+  //     }
+  //     else {
+  //       this.chosenPlanet = planetInArray;
+  //     }
+  //   });
+  // }
 }

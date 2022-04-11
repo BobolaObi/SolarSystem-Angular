@@ -1,33 +1,36 @@
 
+
+<app-messages></app-messages>
+
 <h1>We are in the app component</h1>
 <nav>
   <a routerLink="/list"  routerLinkActive="active">List</a>
 </nav>
- <br />
+<br/>
 <nav>
-  <a routerLink="list/3" routerLinkActive="active-link"></a>
+  <a routerLink="list/3" routerLinkActive="active-link"> THIRD PLANET</a>
 </nav>
-
+<br/>
+<nav>
 <a routerLink="page error" routerLinkActive="active-link">
   Invalid page link
-</a><br />
-<router-outlet> </router-outlet>
+</a>
+</nav>
+<br/>
 
+<router-outlet> </router-outlet>
 <!--<h1>Highlight Planet</h1>-->
 <!--<p>-->
 <!--  <mat-form-field appearance="outline">-->
-<!--    <mat-label> Enter item id:</mat-label>-->
-<!--    <input matInput #id>-->
+<!--  <mat-label> Enter item id:</mat-label>-->
+<!--  <input matInput #id>-->
 <!--  </mat-form-field>-->
 <!--  <button mat-raised-button color="accent"  (click)="displayItem(id.value)">Display item!</button>-->
-
 <!--  <br>-->
-<!--</p>-->
+<!--  </p>-->
 
 <!--&lt;!&ndash;Removing single app content card according to instruction:-->
 <!--Remove the single content card from the AppComponent that you added in a previous assignment. The AppMessage component should stil be displayed on the AppComponent&ndash;&gt;-->
 <!--&lt;!&ndash;<app-content-card [planets]="chosenPlanet" class="chosenPlanet"></app-content-card><br><hr>&ndash;&gt;-->
 <!--<h1>Planets</h1>-->
 <!--&lt;!&ndash;<app-content-list></app-content-list>&ndash;&gt;-->
-
-<app-messages></app-messages>

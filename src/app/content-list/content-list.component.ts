@@ -53,27 +53,28 @@ export class ContentListComponent implements OnInit {
   }
 
   //content from app component
-  ngOnInit(): void{
+  ngOnInit(): void {
     // this.planetsService.getContent().subscribe(listedPlanets => this.planets = listedPlanets);
 
     this.planetServiceService.getContentItem(5).subscribe(
       planetAtIndex => this.chosenPlanet = planetAtIndex
     );
-  }
-  displayItem(id: string): void{
-    if (!parseInt(id)) {
-      this.messageService.add("Please enter a number value");
-      return;
     }
-    let idNumber = parseInt(id);
-    this.planetServiceService.getContent().subscribe(arrayOfPlanets => {
-      let planetInArray = arrayOfPlanets.find(chosenPlanet => chosenPlanet.id === idNumber);
-      if (!planetInArray) {
-        this.messageService.add("Please enter a number value for a valid id");
+    displayItem(id: string): void{
+      if (!parseInt(id)) {
+        this.messageService.add("Please enter a number value");
+        return;
       }
-      else {
-        this.chosenPlanet = planetInArray;
-      }
-    });
+      let idNumber = parseInt(id);
+      this.planetServiceService.getContent().subscribe(arrayOfPlanets => {
+        let planetInArray = arrayOfPlanets.find(chosenPlanet => chosenPlanet.id === idNumber);
+        if (!planetInArray) {
+          this.messageService.add("Please enter a number value for a valid id");
+        }
+        else {
+          this.chosenPlanet = planetInArray;
+        }
+      });
+
   }
 }

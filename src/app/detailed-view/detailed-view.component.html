@@ -1,1 +1,29 @@
-<p>detailed-view works!</p>
+<h1>This is a detailed View</h1>
+<br>
+
+<div *ngIf="idPlanet" class="pokemon-{{idPlanet?.id}}">
+  <div class="name">{{ idPlanet.title}}</div>
+  <div [ngSwitch]='idPlanet.type'>
+    <span *ngSwitchCase='"Inner"'>An inner planet</span>
+    <span *ngSwitchCase='"outer"'>An outer planet</span>
+    <span style="background-color: rgba(255,14,14,0.6);" *ngSwitchDefault>A type tags dont exist fot this planet</span>
+  </div>
+  <div  class="content-card-image;">
+    <img [src]="idPlanet.imgURL">
+  </div>
+
+  <br>
+  <h2>Planet Tags</h2>
+  <div  style="background-color: #8077EA" *ngIf="idPlanet.tags" class="tags">
+
+    <span  class="tag" *ngFor="let tag of idPlanet.tags"> {{ tag }}</span>
+  </div>
+  <br><br>
+
+  <h1> Description</h1>
+  <div class="description">{{ idPlanet.description }}</div>
+  <!-- <span [innerHTML]="returntag()"></span> -->
+</div>
+<div *ngIf="!idPlanet" >
+  Such planets doesnt exist
+</div>
