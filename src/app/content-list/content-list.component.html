@@ -1,7 +1,7 @@
-<app-modify-content-component>
+<app-modify-content-component (newContentEvent)="addContentToList($event)" (updateContentEvent)="updateContentOnList()"></app-modify-content-component>
 
-</app-modify-content-component>
-<app-create-content (newContentEvent)="addContentToList($event)"></app-create-content>
+
+<!--<app-create-content (newContentEvent)="addContentToList($event)"></app-create-content>-->
 <div>
   <input #titleSearch>
   <button (click)="checkForTitle(titleSearch.value)">Title Check</button>
